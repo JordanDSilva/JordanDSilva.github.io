@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
+  text-align: justify;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
 header {
   background: linear-gradient(to right, #202c39, #283845); 
   position: relative;
-  height: 300px;
+  height: 320px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -41,7 +42,7 @@ header::before {
   background-size: cover;        /* Fills the area */
   background-position: center;   /* Center the image */
   background-repeat: no-repeat;
-  filter: blur(8px);
+  filter: blur(5px);
   z-index: -1;
 }
 
@@ -105,6 +106,29 @@ section {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-select-seds img{
+  height: 300px;
+  width: auto;
+  display: block;
+  justify-content: center;
+  padding: 5px;
+  margin: auto;
+  object-fit: cover;
+}
+.img-jumprope img{
+  height: 300px;
+  width: auto;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  padding: 5px;
+  object-fit: cover;
+}
+
+.cv {
+  background: #f0f0f0;
 }
 
 footer {
