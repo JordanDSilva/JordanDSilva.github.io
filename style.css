@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 20px;
   overflow: hidden
@@ -105,12 +105,13 @@ section {
   background: white;
   border-radius: 8px;
   padding: 20px;
+  margin-bottom: 5px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .img-select-seds img{
-  height: 300px;
-  width: auto;
+  width: 500px;
+  height: auto;
   display: block;
   justify-content: center;
   padding: 5px;
@@ -118,8 +119,8 @@ section {
   object-fit: cover;
 }
 .img-jumprope img{
-  height: 300px;
-  width: auto;
+  width: 400px;
+  height: auto;
   display: block;
   justify-content: center;
   margin: auto;
