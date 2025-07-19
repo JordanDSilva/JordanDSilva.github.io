@@ -45,7 +45,11 @@ header::before {
 }
 
 header h1 {
+<<<<<<< HEAD
   font-size: 5rem;
+=======
+  font-size: xxx-large;
+>>>>>>> 3cbe15a (My first commit)
   text-shadow: 
   	-2px -2px 0 black,
 	2px -2px 0 black,
@@ -55,7 +59,11 @@ margin-bottom: 10px;
 }
 
 header p {
+<<<<<<< HEAD
   font-size: 2rem;
+=======
+  font-size: xx-large;
+>>>>>>> 3cbe15a (My first commit)
   opacity: 0.9;
 }
 
