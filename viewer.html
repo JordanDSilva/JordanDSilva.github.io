@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- KaTeX CDN -->
+  <link rel="stylesheet" href="katex/katex.min.css">
+  <script src="katex/katex.min.js"></script>
+  <style>
+        body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 10px; 
+      background: #f5f7fa; 
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    textarea {
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 1em;
+      resize: vertical;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #out {
+      margin: 20px auto;
+      font-size: 2em;
+      width: 80%;
+      text-align: center;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>LaTeX Equations Maker</h1>
+  <textarea id="in">
+     \frac{d\textcolor{limegreen}{Q(z)}}{dz} = \frac{\textcolor{blue}{\dot{n}_{\mathrm{ion}}(z)}/n_{\mathrm{H}}(z) - \textcolor{limegreen}{Q(z)}/\textcolor{red}{\mathrm{t_{rec}}(z)}}{(1+z)\times H(z)}
+     
+     \\[1em]
+
+     \tiny
+     \begin{align*}
+     1 -\textcolor{limegreen}{Q(z)} &= \mathrm{Neutral \; fraction}
+     \\[0.0em]
+     \textcolor{blue}{\dot{n}_{\mathrm{ion}}(z)} &= \mathrm{Lyman \; continuum \; emissivity}
+     \\[0.0em]
+     \textcolor{red}{\mathrm{t_{rec}}(z)} &= \mathrm{Recombination \; timescale}
+     \end{align*}
+  </textarea>
+  <div id="out"></div>
+
+  <script>
+    const input = document.getElementById("in");
+    const out = document.getElementById("out");
+
+    function render() {
+      try {
+        katex.render(input.value, out, {
+          throwOnError: false,
+          displayMode: true
+        });
+      } catch (e) {
+        out.innerText = e.toString();
+      }
+    }
+
+    input.addEventListener("input", render);
+    render();
+  </script>
+  <div><p style="font-size: 10px;">Powered by <a href="https://katex.org" target="_blank">KaTeX</a></p></div>
+</body>
+</html>
