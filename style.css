@@ -37,9 +37,8 @@ p {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
-
 .cool-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-15px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   background: linear-gradient(135deg, #6b8ce7, #283048);
 }
@@ -80,6 +79,11 @@ header h1 {
 header p {
   font-size: xx-large;
   opacity: 0.9;
+}
+header .cool-button {
+  position: absolute;
+  right: 20px;
+  top: 90%;
 }
 
 section {
@@ -157,6 +161,19 @@ section {
   object-fit: cover;
 }
 .img-jumprope img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.img-ads img{
+/*  width: 200px;
+  height: auto;*/
+  display: block;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  object-fit: cover;
+}
+.img-ads img:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
